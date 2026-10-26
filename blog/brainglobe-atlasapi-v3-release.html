@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>brainglobe-atlasapi V3 is here! &#8212; BrainGlobe</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3215791a" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=c83e6b79" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=18bd87630a240e9c25be"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be" />
+
+    <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/sg-tags.js?v=d80f6fa4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'blog/brainglobe-atlasapi-v3-release';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://brainglobe.info/blog/brainglobe-atlasapi-v3-release.html" />
+    <link rel="icon" href="../_static/brainglobe.png"/>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+     
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/brainglobe.png" class="logo__image only-light" alt=""/>
+    <img src="../_static/brainglobe.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">BrainGlobe</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../about.html">
+    About
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../documentation/index.html">
+    Documentation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../community/index.html">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="index.html">
+    Blog
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../projects/index.html">
+    Projects
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/brainglobe" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://mastodon.online/@brainglobe" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i><span class="visually-hidden">Mastodon</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bsky.app/profile/brainglobe.info" title="Bluesky" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-bluesky fa-lg" aria-hidden="true"></i><span class="visually-hidden">Bluesky</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://brainglobe.zulipchat.com" title="Zulip (Developer chat)" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-comments fa-lg" aria-hidden="true"></i><span class="visually-hidden">Zulip (Developer chat)</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://forum.image.sc/tag/brainglobe" title="image.sc (Help forum)" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-question fa-lg" aria-hidden="true"></i><span class="visually-hidden">image.sc (Help forum)</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button type="button" class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../about.html">
+    About
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../documentation/index.html">
+    Documentation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../community/index.html">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="index.html">
+    Blog
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../projects/index.html">
+    Projects
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/brainglobe" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://mastodon.online/@brainglobe" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i><span class="visually-hidden">Mastodon</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bsky.app/profile/brainglobe.info" title="Bluesky" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-bluesky fa-lg" aria-hidden="true"></i><span class="visually-hidden">Bluesky</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://brainglobe.zulipchat.com" title="Zulip (Developer chat)" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-comments fa-lg" aria-hidden="true"></i><span class="visually-hidden">Zulip (Developer chat)</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://forum.image.sc/tag/brainglobe" title="image.sc (Help forum)" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-question fa-lg" aria-hidden="true"></i><span class="visually-hidden">image.sc (Help forum)</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__postcard">
+   
+  <h2>
+     
+    <i class="fa fa-calendar"></i>
+    
+    <span>10 August 2026</span>
+    
+  </h2>
+  <ul>
+    <div class="ablog-sidebar-item ablog__postcard2">
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
+    </span>
+     
+    <a href="author/igor-tatarnikov.html">Igor Tatarnikov</a>
+      
+  </li>
+   
+  <li id="ablog-sidebar-item location ablog__location">
+    <span>
+      
+      <i class="fa-fw fa fa-location-arrow"></i>
+      
+    </span>
+     
+    <a href="location/london.html">London</a>
+     ,    
+    <a href="location/england.html">England</a>
+      
+  </li>
+   
+  <li id="ablog-sidebar-item language ablog__language">
+    <span>
+      
+      <i class="fa-fw fa fa-language"></i>
+      
+    </span>
+     
+    <a href="language/english.html">English</a>
+      
+  </li>
+   
+  <li id="ablog-sidebar-item category ablog__category">
+    <span>
+      
+      <i class="fa-fw fa fa-folder-open"></i>
+      
+    </span>
+     
+    <a href="category/brainglobe.html">brainglobe</a>
+      
+  </li>
+    
+</div>
+  </ul>
+</div>
+</div>
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__recentposts">
+  <h3>
+    <a href="../blog.html">Recent Posts</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="danionella-atlas-added.html">
+        23 September - A 2.5 µm adult Danionella cerebrum atlas joins BrainGlobe
+      </a>
+    </li>
+    
+    <li>
+      <a href="duke-dev-rat-atlas-added.html">
+        25 August - The Duke Developmental Rat Brain Atlases have been added to BrainGlobe
+      </a>
+    </li>
+    
+    <li>
+      <a href="duke-mouse-brain-atlas-added.html">
+        18 August - Duke Mouse Brain Atlas has been added to BrainGlobe
+      </a>
+    </li>
+    
+    <li>
+      <a href="tawny-dragon-atlas-added.html">
+        12 August - A Brain Atlas for the Tawny Dragon, Ctenophorus decresii, has been added to BrainGlobe
+      </a>
+    </li>
+    
+    <li>
+      <a href="atlas-api-v3.html">
+        17 July - brainglobe-atlasapi V3 pre-release
+      </a>
+    </li>
+    
+  </ul>
+</div>
+</div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><code class="docutils literal notranslate"><span class="pre">brainglobe-atlasapi</span></code> V3 is here!</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                   <section class="tex2jax_ignore mathjax_ignore" id="brainglobe-atlasapi-v3-is-here">
+<h1><code class="docutils literal notranslate"><span class="pre">brainglobe-atlasapi</span></code> V3 is here!<a class="headerlink" href="#brainglobe-atlasapi-v3-is-here" title="Link to this heading">#</a></h1>
+<p>We’re excited to announce the full release of <code class="docutils literal notranslate"><span class="pre">brainglobe-atlasapi</span></code> version 3. You can install it (or upgrade) with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>brainglobe-atlasapi
+</pre></div>
+</div>
+<p>If you followed along with the <a class="reference internal" href="atlas-api-v3.html"><span class="std std-doc">V3 pre-release post</span></a>, you already know what changed under the hood. Atlases have moved from single monolithic archives on <a class="reference external" href="https://gin.g-node.org/">GIN</a> to independently versioned components stored on AWS S3, with image data in the <a class="reference external" href="https://ngff.openmicroscopy.org/">OME-Zarr</a> format and meshes in the <a class="reference external" href="https://github.com/google/neuroglancer/blob/576c94b08ad7609919eb42f8a93b9cf0e161df14/src/datasource/precomputed/meshes.md#multi-resolution-mesh-format">precomputed</a> format.</p>
+<section id="a-quick-recap-of-the-new-structure">
+<h2>A quick recap of the new structure<a class="headerlink" href="#a-quick-recap-of-the-new-structure" title="Link to this heading">#</a></h2>
+<p>An atlas is no longer a single bundle. It is a manifest that points at four kinds of independently versioned components: a template, an annotation set (labels, hemispheres, meshes, and pre-computed masks), a coordinate space, and a terminology. The layout follows the <a class="reference external" href="https://atlas-assets.readthedocs.io/en/latest/index.html">Atlas Asset Organization</a> from the Allen Institute.</p>
+<p>Components that are shared between atlases are stored once rather than duplicated per atlas. Two annotation sets associated with the same template, or the same terminology reused across related atlases, are uploaded a single time.</p>
+<img alt="An illustration showing the remote and the local directory structures. The remote directory shows two atlases with their shared components. The total disk usage on the remote is 2.8 GB. The local directory is shown after installing the atlases. Only the necessary components are downloaded and the disk usage is 268 KB." class="only-dark" src="../_images/brainglobe-atlasapi_v3_structure_dark.png" />
+<img alt="An illustration showing the remote and the local directory structures. The remote directory shows two atlases with their shared components. The total disk usage on the remote is 2.8 GB. The local directory is shown after installing the atlases. Only the necessary components are downloaded and the disk usage is 268 KB." class="only-light" src="../_images/brainglobe-atlasapi_v3_structure.png" />
+<p><strong>Figure 1. The remote and local directory structures for two atlases sharing components.</strong> The files on the remote take 2.8 GB. A local install of both atlases takes 268 KB until you ask for actual pixels or meshes.</p>
+<p>The <a class="reference internal" href="atlas-api-v3.html"><span class="std std-doc">pre-release post</span></a> has the full detail on the format itself.</p>
+</section>
+<section id="what-this-means-now">
+<h2>What this means now<a class="headerlink" href="#what-this-means-now" title="Link to this heading">#</a></h2>
+<section id="components-are-only-fetched-when-requested">
+<h3>Components are only fetched when requested<a class="headerlink" href="#components-are-only-fetched-when-requested" title="Link to this heading">#</a></h3>
+<p>Instantiating an atlas fetches the manifest, the terminology, and a handful of small metadata files. Templates, annotations, hemispheres, meshes and masks are each fetched from S3 the first time they are requested, and cached locally afterwards.</p>
+<p>Download times now scale with what your analysis needs, not with the size of the atlas it happens to use. Visualising the hippocampus for every BrainGlobe atlas only fetches around 100 MB of meshes. To complete this workflow in the current version, all data would be downloaded for every atlas resulting in 500 GB of images and meshes on disk.</p>
+<img alt="Two routes to the same result for the task &quot;visualise the hippocampus inside the brain&quot;. The old route downloads the whole atlas as a single 7.4 GB TAR archive containing every image and mesh. The new route downloads only the requested hippocampus and root meshes, 2.3 MB. Both end at the same rendering of a green hippocampus inside a transparent brain." src="../_images/task_figure.png" />
+<p><strong>Figure 2. Lazy fetching of components for analysis.</strong> To draw the hippocampus inside a transparent brain, V2 pulled a 7.4 GB archive containing every image and every mesh in the atlas. V3 fetches the two meshes the render actually uses, 2.3 MB.</p>
+</section>
+<section id="uptime-and-download-speed">
+<h3>Uptime and download speed<a class="headerlink" href="#uptime-and-download-speed" title="Link to this heading">#</a></h3>
+<p>Atlases are now served from AWS S3 rather than from <a class="reference external" href="https://gin.g-node.org/">GIN</a>. GIN has served BrainGlobe well for years, but it is hosted by a single research institute, and when it was slow or down every pipeline that needed a fresh atlas stalled. S3 is redundant and has much higher throughput, so that should stop happening. The chunked formats help here too: a download is now many small independent requests that can be fetched in parallel, instead of one long serial transfer.</p>
+</section>
+<section id="faster-iteration-across-atlases">
+<h3>Faster iteration across atlases<a class="headerlink" href="#faster-iteration-across-atlases" title="Link to this heading">#</a></h3>
+<p>Comparing regions across atlases used to mean waiting for each atlas to download in full before you could look at anything. Now a loop over a many atlases costs a few manifest downloads plus whichever components you touch. Comparing region hierarchies never downloads a single voxel, and comparing one region’s mesh downloads one mesh per atlas.</p>
+</section>
+<section id="faster-structure-mask-computation">
+<h3>Faster structure mask computation<a class="headerlink" href="#faster-structure-mask-computation" title="Link to this heading">#</a></h3>
+<p>In V2, <code class="docutils literal notranslate"><span class="pre">atlas.get_structure_mask(&quot;CTX&quot;)</span></code> walked the region tree, collected every descendant id, and ran <code class="docutils literal notranslate"><span class="pre">np.isin</span></code> over the entire annotation volume. This took seconds to minutes for a region with many children, every time, for every region. V3 ships masks as a pre-computed 4D array with one slice per region, so <code class="docutils literal notranslate"><span class="pre">get_structure_mask</span></code> fetches and reads a single slice. This doesn’t add a significant disk space burden as the masks are highly compressible.</p>
+</section>
+<section id="pinning-an-atlas-version">
+<h3>Pinning an atlas version<a class="headerlink" href="#pinning-an-atlas-version" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">BrainGlobeAtlas</span></code> can now take an explicit version:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">brainglobe_atlasapi</span><span class="w"> </span><span class="kn">import</span> <span class="n">BrainGlobeAtlas</span>
+
+<span class="n">atlas</span> <span class="o">=</span> <span class="n">BrainGlobeAtlas</span><span class="p">(</span><span class="s2">"allen_mouse_25um"</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s2">"3.0"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Leave it out and you get the latest release, as before. Provide it and you get that specific BrainGlobe version of the atlas. A methods section can then name the version it used, and someone else can reproduce the analysis years later. Several versions of the same atlas can also sit side by side locally, which the old format did not allow.</p>
+</section>
+<section id="looking-at-an-atlas-without-installing-anything">
+<h3>Looking at an atlas without installing anything<a class="headerlink" href="#looking-at-an-atlas-without-installing-anything" title="Link to this heading">#</a></h3>
+<p>Because the image data are OME-Zarr and the meshes are in the precomputed format, both are directly readable by <a class="reference external" href="https://github.com/google/neuroglancer">neuroglancer</a>. Atlases on the <a class="reference internal" href="../documentation/brainglobe-atlasapi/usage/atlas-details.html"><span class="std std-doc">atlas details page</span></a> now carry a “View in neuroglancer” badge, for example the <a class="reference external" href="https://neuroglancer-demo.appspot.com/#!https://brainglobe.s3.amazonaws.com/ng_state_files/allen_mouse.json">Allen adult mouse atlas</a> or the <a class="reference external" href="https://neuroglancer-demo.appspot.com/#!https://brainglobe.s3.amazonaws.com/ng_state_files/columbia_cuttlefish.json">Columbia cuttlefish atlas</a>.</p>
+<p>Being able to preview an atlas this quickly makes it much easier to decide whether it suits your data before you build an analysis pipeline around it, and to share a specific view with a collaborator or a reviewer.</p>
+</section>
+<section id="faster-releases-of-new-atlases">
+<h3>Faster releases of new atlases<a class="headerlink" href="#faster-releases-of-new-atlases" title="Link to this heading">#</a></h3>
+<p>Since components are versioned separately, changing one of them no longer forces a rebuild of everything else. Fixing a typo in a region name used to mean regenerating and repackaging the whole atlas, which for a high-resolution atlas is hours of compute followed by a fresh multi-gigabyte upload. Now it means republishing a terminology file and referencing it from a new atlas manifest. The same goes for adding additional metadata to an atlas or one of its components, so expect considerable progress here in the future!</p>
+</section>
+<section id="easier-atlas-collections">
+<h3>Easier atlas collections<a class="headerlink" href="#easier-atlas-collections" title="Link to this heading">#</a></h3>
+<p>Shared components make families of atlases much cheaper to publish. A single template with several annotation sets, or an atlas with multiple templates that share a single annotation set, is now a handful of manifest files pointing at mostly the same objects, rather than several nearly identical multi-gigabyte bundles.</p>
+</section>
+</section>
+<section id="what-do-i-need-to-do">
+<h2>What do I need to do?<a class="headerlink" href="#what-do-i-need-to-do" title="Link to this heading">#</a></h2>
+<p>For most users, nothing. The Python API for the common paths is unchanged, and the first instantiation of an atlas will download the atlases in the new format automatically. V3 cannot read the old atlas format, so the old directories (for example <code class="docutils literal notranslate"><span class="pre">~/.brainglobe/allen_mouse_25um</span></code>) are no longer used and can be deleted.</p>
+<p>A few things did change, and are worth checking if you are using them directly:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">get_structure_mask</span></code> now returns a binary mask. V2 returned an array holding the structure’s id at every voxel belonging to that structure. V3 returns <code class="docutils literal notranslate"><span class="pre">1</span></code> where the structure or a descendant is present and <code class="docutils literal notranslate"><span class="pre">0</span></code> elsewhere, as <code class="docutils literal notranslate"><span class="pre">uint8</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">atlas.reference</span></code> is deprecated in favour of <code class="docutils literal notranslate"><span class="pre">atlas.template</span></code>. It still works, but prints a warning and will be removed in a future version.</p></li>
+<li><p>Mesh paths no longer end in <code class="docutils literal notranslate"><span class="pre">.obj</span></code>. <code class="docutils literal notranslate"><span class="pre">structure[&quot;mesh_filename&quot;]</span></code> points at a Draco-encoded precomputed mesh. Use <code class="docutils literal notranslate"><span class="pre">structure[&quot;mesh&quot;]</span></code>, which decodes it for you and returns a <code class="docutils literal notranslate"><span class="pre">meshio.Mesh</span></code> in the same orientation and units as before.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BrainGlobeAtlas</span></code> no longer accepts <code class="docutils literal notranslate"><span class="pre">interm_download_dir</span></code> or <code class="docutils literal notranslate"><span class="pre">print_authors</span></code>.</p></li>
+<li><p>The local layout has moved to <code class="docutils literal notranslate"><span class="pre">~/.brainglobe/brainglobe-atlasapi/</span></code>. If you were locating atlas files by searching <code class="docutils literal notranslate"><span class="pre">~/.brainglobe</span></code> directly, please use <code class="docutils literal notranslate"><span class="pre">BrainGlobeAtlas</span></code> or <code class="docutils literal notranslate"><span class="pre">brainglobe_atlasapi.list_atlases</span></code> instead.</p></li>
+</ul>
+</section>
+<section id="feedback">
+<h2>Feedback<a class="headerlink" href="#feedback" title="Link to this heading">#</a></h2>
+<p>If you have any feedback please contact us on <a class="reference external" href="https://brainglobe.zulipchat.com/#narrow/channel/483906-Atlas-API">Zulip</a> or open an issue on <a class="reference external" href="https://github.com/brainglobe/brainglobe-atlasapi/issues">GitHub</a>.</p>
+</section>
+</section>
+
+<div class="section ablog__blog_comments">
+     
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+     
+    <a href="atlas-api-v3.html">
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>brainglobe-atlasapi V3 pre-release</span>
+    </a>
+    
+  </span>
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+     
+    <a href="tawny-dragon-atlas-added.html">
+      <span>A Brain Atlas for the Tawny Dragon, Ctenophorus decresii, has been added to BrainGlobe</span>
+      
+      <i class="fa fa-arrow-circle-right"></i>
+      
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-quick-recap-of-the-new-structure">A quick recap of the new structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-this-means-now">What this means now</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#components-are-only-fetched-when-requested">Components are only fetched when requested</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uptime-and-download-speed">Uptime and download speed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#faster-iteration-across-atlases">Faster iteration across atlases</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#faster-structure-mask-computation">Faster structure mask computation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pinning-an-atlas-version">Pinning an atlas version</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looking-at-an-atlas-without-installing-anything">Looking at an atlas without installing anything</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#faster-releases-of-new-atlases">Faster releases of new atlases</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#easier-atlas-collections">Easier atlas collections</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-do-i-need-to-do">What do I need to do?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback">Feedback</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item"><p class="sphinx-version">
+Created using <a href="https://sphinx-doc.org/">Sphinx</a> 8.2.3.
+<br/>
+</p>
+<p class="theme-version">
+Built with the
+<a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a>
+0.23.0.
+</p></div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><div class="things-in-a-row">
+</div></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
