@@ -9,52 +9,38 @@ language: English
 
 # The LAMBADA developmental mouse brain atlases have been added to BrainGlobe
 
-TODO: Write the blog
+The structure of cerebral vasculature continues to develop after birth, but its spatiotemporal dynamics have always been unclear. To address this, [de Launoit et al. (2026)](https://doi.org/10.1016/j.cell.2026.03.013) created the light-sheet-aligned mouse brain annotated developmental atlas (LAMBADA) to align spatial transcriptomics data on key genes governing vascular development. Using seven different timepoints in development (P3, P5, P7, P9, P12, P14 and P21), the authors provide high resolution light-sheet fluorescence microscopy (LSFM) templates which are volume-corrected to in-vivo MRI benchmarks, ensuring that this developmental atlas reflects the natural brain growth trajectories as seen in development. We have packaged this atlas into BrainGlobe to make this resource useable throughout the BrainGlobe ecosystem. This also presents an exciting opportunity for future tools to be developed around spatial transcriptomic data in our upcoming data API. 
 
-The mouse brain atlases provided by the Allen Institute for Brain Science (AIBS) are widely used in the neuroscience community, and as of the writing of this blog post, the most updated version of their atlas is version 3 of the Common Coordinate Framework (CCF). However, there are many benefits from adding older versions of atlases, namely in terms of keeping a record of the history of atlas versions, as well as reproducing historical results which used older atlases. Therefore, we have packaged the CCFv2 mouse brain atlases provided by the Allen Institute. These include an adult mouse brain atlas with all grey matter regions without fiber tracts, an adult mouse brain atlas with only the fiber tracts, and a developmental adult mouse brain atlas containing information on the developmental taxonomy of various regions. The CCFv2 is a symmetric atlas constructed from the same 528 Nissl stained 25um coronal slices as in CCFv1, but reprocessed for symmetry and to introduce more annotations based on the Allen Reference Atlas. 
-
-We have packaged the following three atlases: 
-## 1. CCFv2 Mouse Brain Atlas
-```{image} ./images/ccfv2_mouse_brain.png
-:alt: ccfv2 mouse brain atlas annotations
-:width: 830px
-```
-
-**Figure 1. Anterior view of the CCFv2 Mouse Brain atlas annotations and reference image.**
-
-## 2. CCFv2 Mouse Fiber Tracts Atlas
-```{image} ./images/ccfv2_fiber_mouse.png
-:alt: ccfv2 mouse fiber tracts atlas annotations
-:width: 830px
-```
-
-**Figure 2. Anterior view of the CCFv2 Mouse Fiber Tracts atlas annotations and reference image.**
-
-## 3. CCFv2 Developmental Mouse Brain Atlas
-```{image} ./images/ccfv2_dev_mouse.png
-:alt: ccfv2 developmental mouse brain atlas annotations
-:width: 830px
-```
-
-**Figure 3. Anterior view of the CCFv2 Developmental Mouse Brain atlas annotations and reference image.**
+We have packaged the following atlases: 
+* `lambada_dev_mouse_p3_25um`
+* `lambada_dev_mouse_p5_25um`
+* `lambada_dev_mouse_p7_25um`
+* `lambada_dev_mouse_p9_25um`
+* `lambada_dev_mouse_p12_25um`
+* `lambada_dev_mouse_p14_25um`
+* `lambada_dev_mouse_p21_25um`
 
 
-The BrainGlobe team re-packaged the data generated and made public by the Allen Institute, making it now possible to use the CCFv2 mouse atlases within the BrainGlobe ecosystem. The atlas names are `ccfv2_mouse_25um`, `ccfv2_fiber_mouse_25um`, and `ccfv2_dev_mouse_25um`.
+![coronal sections of the lambada developmental mouse brain atlases](./images/lambada_coronal_sections.png)
+
+**Figure 1. Coronal sections of the 7 developmental timepoints covered by LAMBADA.**
+
 
 ## How do I use the new atlases?
 
-You can use the CCFv2 atlases for visualisation like other BrainGlobe atlases, as written below:
+You can use the LAMBADA developmental mouse brain atlases for visualisation like other BrainGlobe atlases, as written below:
 
 * Install BrainGlobe ([instructions](/documentation/index))
-* Open napari and follow the steps in our [download tutorial](/tutorials/manage-atlases-in-GUI.md) for the CCFv2 atlas
+* Open napari and follow the steps in our [download tutorial](/tutorials/manage-atlases-in-GUI.md) for the LAMBADA developmental mouse brain atlas
 * Visualise the different parts of the atlas as described in our [visualisation tutorial](/tutorials/visualise-atlas-napari)
 
-The end result will look something like Figure 4.
+The end result will look something like Figure 2.
 
-![ccfv2 mouse brain atlas visualised in napari](./images/ccfv2_mouse_brain_napari.png)
 
-**Figure 4: The CCFv2 Mouse Brain atlas visualised with `brainrender-napari`: with mesh overlays for the brain (grey), the hippocampal formation (green) and the cerebellum (yellow).**
+![p14 lambada developmental mouse brain atlas visualised in napari](./images/lambada_p14_meshes.png)
+
+**Figure 2: The P14 LAMBADA Developmental Mouse Brain atlas visualised with `brainrender-napari`: with mesh overlays for the brain (grey) and the hippocampal formation (green).**
 
 ## Why are we adding new atlases?
 
-A fundamental aim of the BrainGlobe project is to make various brain atlases easily accessible by users across the globe. The CCFv2 Mouse Brain atlases allow for users to use historical versions of the Allen 3D atlases easily on BrainGlobe. If you would like to get involved with a similar project, please [get in touch](/contact).
+A fundamental aim of the BrainGlobe project is to make various brain atlases easily accessible by users across the globe. If you would like to get involved with a similar project, please [get in touch](/contact).
