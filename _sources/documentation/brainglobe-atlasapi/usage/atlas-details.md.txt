@@ -18,6 +18,9 @@ different modality (such as serial section two-photon, STP) may produce inferior
 In most software you can choose the atlas from a list, but if using a command line tool, or the API directly, the 
 unique key (e.g. `example_mouse_100um` must be used).
 
+Atlases packaged and hosted by other organisations, such as the Allen Institute, are listed separately on the
+[External atlases](external-atlases.md) page.
+
 # Available atlases
 
 ## Mouse
@@ -151,7 +154,7 @@ Available versions:
   *  `kim_dev_mouse_e11-5_mri-adc_31.5um` - MRI adc template at 31.5 μm resolution
   *  `kim_dev_mouse_e11-5_mri-dwi_31.5um` - MRI dwi template at 31.5 μm resolution 
   *  `kim_dev_mouse_e11-5_mri-fa_31.5um` - MRI fa template at 31.5 μm resolution
-  *  `kim_dev_mouse_e11-5_mri-T2_31.5um` - MRI T2 template at 31.5 μm resolution
+  *  `kim_dev_mouse_e11-5_mri-t2_31.5um` - MRI T2 template at 31.5 μm resolution
 * at E13.5 [![View in neuroglancer](https://img.shields.io/badge/Neuroglancer-View%20atlas-blue)](https://neuroglancer-demo.appspot.com/#!https://brainglobe.s3.amazonaws.com/ng_state_files/kim_dev_mouse_e13-5.json)
   *  `kim_dev_mouse_e13-5_lsfm_20um` - LSFM template at 20 μm resolution
   *  `kim_dev_mouse_e13-5_mri-adc_34um` - MRI adc template at 34 μm resolution
@@ -509,6 +512,44 @@ Available versions:
   
 [![View in neuroglancer](https://img.shields.io/badge/Neuroglancer-View%20atlas-blue)](https://neuroglancer-demo.appspot.com/#!https://brainglobe.s3.amazonaws.com/ng_state_files/ccfv2_dev_mouse.json)
 
+### [LAMBADA Developmental Mouse Brain Atlas](https://doi.org/10.1016/j.cell.2026.03.013)
+This atlas tracks brain development in the mouse at 7 timepoints (P3, P5, P7, P9, P12, P14, P21). Each template is averaged from 20 to 30 LSFM images of iDISCO+ cleared brains of either sex, which were then aligned to an averaged in-vivo MRI scan of three mice per timepoint to correct for any ex-vivo deformation. This is useful for researchers seeking to study the in-vivo volumetric changes of the brain during development. Annotations are based on the CCFv3 Allen annotations. 
+
+Available versions:
+* at P3 [![View in neuroglancer](https://img.shields.io/badge/Neuroglancer-View%20atlas-blue)](https://neuroglancer-demo.appspot.com/#!https://brainglobe.s3.amazonaws.com/ng_state_files/lambada_dev_mouse_p3.json)
+  * `lambada_dev_mouse_p3_25um` 
+* at P5 [![View in neuroglancer](https://img.shields.io/badge/Neuroglancer-View%20atlas-blue)](https://neuroglancer-demo.appspot.com/#!https://brainglobe.s3.amazonaws.com/ng_state_files/lambada_dev_mouse_p5.json)
+  * `lambada_dev_mouse_p5_25um`
+* at P7 [![View in neuroglancer](https://img.shields.io/badge/Neuroglancer-View%20atlas-blue)](https://neuroglancer-demo.appspot.com/#!https://brainglobe.s3.amazonaws.com/ng_state_files/lambada_dev_mouse_p7.json)
+  * `lambada_dev_mouse_p7_25um`
+* at P9 [![View in neuroglancer](https://img.shields.io/badge/Neuroglancer-View%20atlas-blue)](https://neuroglancer-demo.appspot.com/#!https://brainglobe.s3.amazonaws.com/ng_state_files/lambada_dev_mouse_p9.json)
+  * `lambada_dev_mouse_p9_25um`  
+* at P12 [![View in neuroglancer](https://img.shields.io/badge/Neuroglancer-View%20atlas-blue)](https://neuroglancer-demo.appspot.com/#!https://brainglobe.s3.amazonaws.com/ng_state_files/lambada_dev_mouse_p12.json)
+  * `lambada_dev_mouse_p12_25um` 
+* at P14 [![View in neuroglancer](https://img.shields.io/badge/Neuroglancer-View%20atlas-blue)](https://neuroglancer-demo.appspot.com/#!https://brainglobe.s3.amazonaws.com/ng_state_files/lambada_dev_mouse_p14.json)
+  * `lambada_dev_mouse_p14_25um` 
+* at P21 [![View in neuroglancer](https://img.shields.io/badge/Neuroglancer-View%20atlas-blue)](https://neuroglancer-demo.appspot.com/#!https://brainglobe.s3.amazonaws.com/ng_state_files/lambada_dev_mouse_p21.json)
+  * `lambada_dev_mouse_p21_25um`
+ 
+### [Allen CCFv1 Mouse Brain Atlas](https://doi.org/10.1038/nature05453)
+This is the first edition of the mouse brain atlas in the commonly used Allen Common Coordinate Framework, which is included 
+here for historical reasons. The template is based on the 528 Nissl-stained coronal slices from a male P56 mouse brain frozen
+in OCT, which was annotated only on the left hemisphere based on the Allen Reference Atlas. This atlas provides a common 
+coordinate framework for many other useful mouse atlases and data based on CCFv1. 
+
+Available versions:
+* `ccfv1_mouse_25um`
+
+[![View in neuroglancer](https://img.shields.io/badge/Neuroglancer-View%20atlas-blue)](https://neuroglancer-demo.appspot.com/#!https://brainglobe.s3.amazonaws.com/ng_state_files/ccfv1_mouse.json)
+
+### [Allen MOmap Mouse Brain Atlas](https://doi.org/10.1016/j.cell.2026.08.046)
+This atlas builds on the Allen Adult Mouse Brain Atlas (CCFv3) template and introduces a new parcellation of the motor cortex (MO), based on its diverse subcortical projections and consistent with its cortical connectivity and cell-type composition. The MO is subdivided into 16 modules (MO1–16) of similar size, grouped into a redefined primary motor cortex (MOp; MO1–10) and secondary motor cortex (MOs; MO11–16). Note that these MOp and MOs boundaries differ from those in the standard CCFv3 annotation. The atlas is useful for mapping data onto a finer subdivision of motor cortex than the standard Allen parcellation, while staying compatible with the standard CCFv3 volume.
+
+Available versions:
+* `allen_mouse_momap_10um`
+
+[![View in neuroglancer](https://img.shields.io/badge/Neuroglancer-View%20atlas-blue)](https://neuroglancer-demo.appspot.com/#!https://brainglobe.s3.amazonaws.com/ng_state_files/allen_mouse_momap.json)
+
 ## Rat
 ### [Waxholm Space atlas of the Sprague Dawley rat brain](https://doi.org/10.1038/s41592-023-02034-3)
 The Waxholm Space rat brain atlas features annotations of 222 structures, alongside a 39μm MRI template. It provides detailed delineations 
@@ -565,6 +606,27 @@ This atlas is only available at 25μm resolution:
 
 [![View in neuroglancer](https://img.shields.io/badge/Neuroglancer-View%20atlas-blue)](https://neuroglancer-demo.appspot.com/#!https://brainglobe.s3.amazonaws.com/ng_state_files/prairie_vole.json)
 
+### [African mole-rat brain atlas](https://doi.org/10.64898/2026.10.04.756554)
+This is a brain atlas of the African mole-rat (Fukomys anselli) from
+[Zhang et al. (2026)](https://doi.org/10.64898/2026.10.04.756554).
+
+This atlas is only available at 20μm resolution:
+
+* `african_molerat_20um`
+
+Its main template was made from LSFM images of 43 hemispheres. Each hemisphere was mirrored to make a full symmetric brain before averaging.
+
+This atlas also has four additional reference images, showing the vasculature of a single individual:
+
+* `african_molerat-vascular-template`
+* `african_molerat-vascular_AP-smoothed-template`
+* `african_molerat-vascular_DV-smoothed-template`
+* `african_molerat-vascular_ML-smoothed-template`
+
+The first additional reference images were also made with LSFM, but the sample has staining for blood vessels. It was registered to the main template's space. The last three are smoothed versions of the first, each with a 1-D Gaussian kernel along a different axis (antero-posterior (AP), dorso-ventral (DV), mediolateral (ML)). They provide suitable registration targets for functional ultrasound imaging (fUSI) data, which is angle-dependent.
+
+
+[![View in neuroglancer](https://img.shields.io/badge/Neuroglancer-View%20atlas-blue)](https://neuroglancer-demo.appspot.com/#!https://brainglobe.s3.amazonaws.com/ng_state_files/african_molerat.json)
 
 ## Fish
 ### [Max Planck zebrafish brain atlas](http://fishatlas.neuro.mpg.de)
@@ -599,7 +661,9 @@ fibre tracts. For more details, see the [blog post](/blog/danionella-atlas-added
 
 This atlas is only available at 2.5μm resolution:
 * `danionella_cerebrum_mixed_2.5um`
+[![View in neuroglancer](https://img.shields.io/badge/Neuroglancer-View%20atlas-blue)](https://neuroglancer-demo.appspot.com/#!https://brainglobe.s3.amazonaws.com/ng_state_files/danionella_cerebrum_mixed.json)
 
+  
 ## Lizard
 ### [Hoops Tawny Dragon Brain Atlas](https://doi.org/10.1007/s00429-021-02282-z)
 This is a symmetric atlas of the tawny dragon lizard (Ctenophorus decresii) brain from 
@@ -697,3 +761,26 @@ This atlas has 2um isotropic resolution.
 [![View in neuroglancer](https://img.shields.io/badge/Neuroglancer-View%20atlas-blue)](https://neuroglancer-demo.appspot.com/#!https://brainglobe.s3.amazonaws.com/ng_state_files/drosophila_wingdisc_instar3.json)
 
 
+### [Virtual Fly Brain JRC2018Unisex neuropils atlas](https://www.virtualflybrain.org/blog/2022/01/01/jrc-2018-templates-rois-jrc2018/)
+
+This atlas packages the JRC2018Unisex adult _Drosophila melanogaster_ brain
+template with 46 VFB-painted neuropil ROI annotations. The annotations form a
+flat structure list and include source meshes provided by Virtual Fly Brain.
+
+This atlas has anisotropic 0.5189161 × 1.0 × 0.5189161 µm resolution:
+* `vfb_jrc2018u_neuropils_fly_0.519um`
+
+[![View in neuroglancer](https://img.shields.io/badge/Neuroglancer-View%20atlas-blue)](https://neuroglancer-demo.appspot.com/#!https://brainglobe.s3.amazonaws.com/ng_state_files/vfb_jrc2018u_neuropils_fly.json)
+
+### [Virtual Fly Brain JRC2018Unisex VNC atlas](https://www.virtualflybrain.org/term/adult-vnc-neuropils-court2020-court2020/)
+
+This atlas packages the JRC2018UnisexVNC adult _Drosophila melanogaster_
+template with VFB neuropil and domain annotations based on
+[Court et al. (2020)](https://doi.org/10.1016/j.neuron.2020.08.005). It has 20
+visible non-root regions in a flat structure list and includes source meshes
+provided by Virtual Fly Brain.
+
+This atlas has 0.4 µm isotropic resolution:
+* `vfb_jrc2018u_vnc_fly_0.4um`
+
+[![View in neuroglancer](https://img.shields.io/badge/Neuroglancer-View%20atlas-blue)](https://neuroglancer-demo.appspot.com/#!https://brainglobe.s3.amazonaws.com/ng_state_files/vfb_jrc2018u_vnc_fly.json)
